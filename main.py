@@ -144,7 +144,48 @@ while iniciar_trivia == True: #  Mientras iniciar_trivia sea True, repite:
     print(GREEN+"\nCorrecto! ...", nombre, "!"+RESET)
     puntaje = puntaje * 2
     time.sleep(2)
-    print("\n¿Deseas intentar la trivia nuevamente?")
+    print(nombre, "llevas", puntaje, "puntos")
+  print(BLUE+"\n4.- Juego Aritmetico\n"+RESET)
+  print(GREEN+"no suma, ni resta puntos....extra\n"+RESET)
+  def ejercicio1():
+    x = int(input("Ingrese el primer numero: "))
+    y = int(input("ingrese el segundo numero: "))
+    print("El promedio de",x, "y", y, "es: ", ((x + y)/2))
+  def ejercicio2():
+    x = int(input("Ingrese el primer numero: "))
+    y = int(input("ingrese el segundo numero: "))
+    print( x,"elevado a ", y, "es: ", (x**y))
+
+  def ejercicio3():
+    x = int(input("Ingrese el primer numero: "))
+    print("Raiz cuadrada de",x,":",(x**(1/2)))
+
+  print("Ingrese numero (1,2 o 3) de ejercicio: ")
+  num = int(input())
+  
+  if num == 1:
+    ejercicio1()
+    
+  elif num == 2:
+    ejercicio2()
+    
+  elif num == 3:
+    ejercicio3()
+
+  time.sleep(2)
+
+  print(GREEN+"\nGracias", nombre, "por jugar mi trivia")
+#puntaje
+  if puntaje >= 0:
+    print (nombre,"llevas",puntaje, "punto positivo")
+  else:
+    print(nombre,"llevas",puntaje, "punto negativos")
+
+#repetir trivia
+  print("Excelente, has obtenido",puntaje, "puntos"+RESET)
+  
+    
+  print("\n¿Deseas intentar la trivia nuevamente?")
   repetir_trivia = input("Ingresa 'si' para repetir, o cualquier tecla para finalizar: ").lower()
   if repetir_trivia != "si":  # != significa "distinto"
     print("\nEspero ",nombre, "que lo hayas pasado bien, hasta pronto!")
